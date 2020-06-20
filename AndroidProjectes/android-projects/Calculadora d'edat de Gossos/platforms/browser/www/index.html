@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Calculadora de edat de Gossos</title>
+        <script>
+        window.onload=function()
+        {
+        	document.getElementById('butoCalc').addEventListener('click', calcEdat);
+        }	
+        function calcEdat (e)
+        {
+        	var edat = document.getElementById('edatGos').value;
+        	edat = edat * 7;
+        	var resultat = "En anys humans, el seu gos té: " + edat;
+        	document.getElementById('resultat').innerHTML = resultat;       
+        }
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+        <h1>Calculadora de edat de Gossos</h1>
+        <label for="edatGos">Edat del Gos en anys Humans:<label>
+        <input id="edatGos" type="number" />
+        <button id="butoCalc">Calcula</button>
+        <div id="resultat"></div>
+    </body>
+</html>
